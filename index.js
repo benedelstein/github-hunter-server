@@ -4,7 +4,7 @@ const exec = require('child_process').exec;
 
 exports.getEmails = async (request, response) => {
     // only allow cors requests from my extension
-    response.set('Access-Control-Allow-Origin', 'chrome-extension://pfmbgkodcdhaiendaodfomjalihnelnj');
+    response.set('Access-Control-Allow-Origin', 'chrome-extension://ppcegaekdbgcgbapfdcjbhednhmgcjnk');
 
     if (request.method === 'OPTIONS') {
         // Send response to OPTIONS requests
