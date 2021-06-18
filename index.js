@@ -51,7 +51,7 @@ exports.getEmails = async (request, response) => {
             }  
             console.log(stdout);
             let emails = stdout.split("\n").filter(e => {
-                console.log(e, e.endsWith("@users.noreply.github.com"), e != "");
+                // console.log(e, e.endsWith("@users.noreply.github.com"), e != "");
                 return !e.endsWith("@users.noreply.github.com") && e != "";
             });
             console.log(emails);
@@ -60,7 +60,7 @@ exports.getEmails = async (request, response) => {
             return response.send(emails);
         });
     } catch(error) {
-        console.log(error);
+        console.error(error);
         response.status(500).send(error);
         return;
     }
